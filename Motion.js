@@ -2,7 +2,7 @@ var x, y, z;
 
 var xebraState = new Xebra.State({
   hostname: "127.0.0.1",
-  port: 8080,
+  port: 8086,
   supported_objects: Xebra.SUPPORTED_OBJECTS
 });
 xebraState.connect();
