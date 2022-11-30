@@ -1,0 +1,18 @@
+body{
+    background-color: #1f1f1f;
+    font-family: Rubik, Georgia, serif !important;
+}
+    
+h1{
+    color: #fbf8f8;
+}
+
+h2{
+    color: #1f1f1f
+}
+
+canvas {
+    display: block;
+    background-color: #1f1f1f;
+    font-family: Rubik, Georgia, serif !important;
+  }
