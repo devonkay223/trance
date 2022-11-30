@@ -1,21 +1,30 @@
 var x, y, z;
 
-webSocketPort = new osc.WebSocketPort({
-  socket: ws
+var xebraState = new Xebra.State({
+  hostname: "127.0.0.1",
+  port: 8080,
+  supported_objects: Xebra.SUPPORTED_OBJECTS
 });
+xebraState.connect();
 
-// send message
-maxAPI.addHandler("send", (...args) => {
-  if (webSocketPort && isConnected) {
-      webSocketPort.send({
-              address: "/max/midi",
-              args: [{
-                      type: "i",
-                      value: args[0]
-              }]
-          });
-  }
-});
+var sliderObj;
+sliderObj.setParamValue("distance", 72);
+// webSocketPort = new osc.WebSocketPort({
+//   socket: ws
+// });
+
+// // send message
+// maxAPI.addHandler("send", (...args) => {
+//   if (webSocketPort && isConnected) {
+//       webSocketPort.send({
+//               address: "/max/midi",
+//               args: [{
+//                       type: "i",
+//                       value: args[0]
+//               }]
+//           });
+//   }
+// });
 
 window.addEventListener('devicemotion', function(e) 
 { 
